@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NewsClassifier  Website</title>
+	 <!-- Font Awesome -->
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/">News Classifier Website</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item">
+        <!-- <a class="nav-link" href="/about">About</a> -->
+      </li>
+
+
+    </ul>
+  </div>
+</nav>
+<br/>
+<br/>
+
+<div class="jumbotron mt-3 animate__animated animate__fadeIn  animate__delay-1s" style="background:#563d7c;color:#fff">
+    <div class="container text-center">
+      <h2 class="display-3">News Classifier</h2>
+      <p>Using Machine Learning Model </p>
+      <div class="">
+        <h4 class="py-3 ">Follow me On !!!!!</h4>
+        <a class="m-2 "href="#"><i class="fa fa-github fa-3x"  style="color:#6c63ff"></i></a>
+        <a class="m-2 "href="#"><i class="fa fa-facebook fa-3x"  style="color:#6c63ff"></i></a>
+        <a class="m-2 "href="#"><i class="fa fa-instagram fa-3x"  style="color:#6c63ff"></i></a>
+    </div>
+      <!-- <p><a class="btn btn-warning waves-effect btn-lg" href="/" role="button">Refresh &raquo;</a></p> -->
+    </div>
+  </div>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+</div>
+
+
+
+
+
+
+
+<div class="container" >
+<form method="POST" action="/predict">
+
+<textarea type="text" name="rawtext" id="message" class="form-control" cols="30" rows="10" placeholder="Please write something"></textarea>
+    <select name="modelchoice">
+      <option selected>Select Model Type</option>
+      <option value="nb">Naive Bayes</option>
+      <option value="logit">Logistic Regression</option>
+      <option value="rf">Random Forest</option>
+      
+    </select>
+	<button type="reset" class="btn btn-danger">Clear</button>
+  <button type="submit" class="btn btn-success">Predict</button>
+  <a class="btn btn-warning waves-effect btn-lg" href="/" role="button">Refresh &raquo;</a>
+</form>
+</div>
+<br/>
+<br/>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+          <div class="card mb-10 shadow-sm" id="custom_card">
+          	<h4>Original Text</h4>
+          	<p>{{ rawtext }}</p>
+			
+		</div>
+	</div>
+
+
+
+	<div class="col-md-6">
+          <div class="card mb-10 shadow-sm" id="custom_card2">
+          	<h4>Prediction</h4>
+			<div class="alert alert-success" role="alert"><p>{{ final_result }}</p></div>
+			
+		</div>
+	</div>
+</div>
+	<br/>
+  <br/>
+  <br/>
+
+</div>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+
+</body>
+</html>
